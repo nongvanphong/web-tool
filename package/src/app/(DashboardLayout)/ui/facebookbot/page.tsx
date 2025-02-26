@@ -1,5 +1,5 @@
 "use client";
-import { Badge, Dropdown, Progress } from "flowbite-react";
+import { Badge, Dropdown } from "flowbite-react";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Icon } from "@iconify/react";
 import { Table } from "flowbite-react";
@@ -15,16 +15,18 @@ import Card from "@/app/components/common/card";
 const Page = () => {
   const ProductTableData = [
     {
+      id: 1,
       img: product1,
       name: "iPhone 13 pro max-Pacific Blue-128GB storage",
       payment: "$180",
       paymentstatus: "Partially paid",
-      process: 45,
+      process: 100,
       processcolor: "bg-warning",
       statuscolor: "secondary",
       statustext: "Confirmed",
     },
     {
+      id: 2,
       img: product2,
       name: "Apple MacBook Pro 13 inch-M1-8/256GB-space",
       payment: "$120",
@@ -35,6 +37,7 @@ const Page = () => {
       statustext: "Confirmed",
     },
     {
+      ud: 3,
       img: product3,
       name: "PlayStation 5 DualSense Wireless Controller",
       payment: "$120",
@@ -44,7 +47,9 @@ const Page = () => {
       statuscolor: "error",
       statustext: "Cancelled",
     },
+
     {
+      id: 4,
       img: product5,
       name: "Amazon Basics Mesh, Mid-Back, Swivel Office",
       payment: "$120",
@@ -54,7 +59,9 @@ const Page = () => {
       statuscolor: "secondary",
       statustext: "Confirmed",
     },
+
     {
+      id: 5,
       img: product4,
       name: "Sony X85J 75 Inch Sony 4K Ultra HD LED Smart",
       payment: "$120",
@@ -89,14 +96,22 @@ const Page = () => {
         <div className="overflow-x-auto">
           <Table hoverable>
             <Table.Head>
-              <Table.HeadCell className="p-6">Products</Table.HeadCell>
-              <Table.HeadCell>Payment</Table.HeadCell>
-              <Table.HeadCell>Status</Table.HeadCell>
+              <Table.HeadCell>STT</Table.HeadCell>
+              <Table.HeadCell>ID</Table.HeadCell>
+              <Table.HeadCell className="p-6">BOT</Table.HeadCell>
+
+              <Table.HeadCell>Trạng thái</Table.HeadCell>
               <Table.HeadCell></Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y divide-border dark:divide-darkborder ">
               {ProductTableData.map((item, index) => (
                 <Table.Row key={index}>
+                  <Table.Cell>
+                    <h5 className="text-base text-wrap">{item.id}</h5>
+                  </Table.Cell>
+                  <Table.Cell>
+                    <h5 className="text-base text-wrap">{item.id}</h5>
+                  </Table.Cell>
                   <Table.Cell className="whitespace-nowrap ps-6">
                     <div className="flex gap-3 items-center">
                       <Image
@@ -109,25 +124,7 @@ const Page = () => {
                       </div>
                     </div>
                   </Table.Cell>
-                  <Table.Cell>
-                    <h5 className="text-base text-wrap">
-                      {item.payment}
-                      <span className="text-dark opacity-70">
-                        <span className="mx-1">/</span>499
-                      </span>
-                    </h5>
-                    <div className="text-sm font-medium text-dark opacity-70 mb-2 text-wrap">
-                      {item.paymentstatus}
-                    </div>
-                    <div className="me-5">
-                      <Progress
-                        progress={item.process}
-                        color={`${item.processcolor}`}
-                        className={`${item.processcolor}`}
-                        size={"sm"}
-                      />
-                    </div>
-                  </Table.Cell>
+
                   <Table.Cell>
                     <Badge
                       color={`light${item.statuscolor}`}
@@ -166,3 +163,7 @@ const Page = () => {
 };
 
 export default Page;
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}

@@ -1,11 +1,10 @@
 import Image from "next/image";
-import React from "react";
 import ErrorImg from "/public/images/backgrounds/errorimg.svg";
 import { Button } from "flowbite-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Error-404"
+  title: "Error-404",
 };
 const Error = () => {
   return (

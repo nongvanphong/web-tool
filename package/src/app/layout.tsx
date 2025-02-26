@@ -6,6 +6,7 @@ import "./css/globals.css";
 import { Flowbite, ThemeModeScript } from "flowbite-react";
 import customTheme from "@/utils/theme/custom-theme";
 import { appConfig } from "../../config";
+import TopLoaderProvider from "./TopLoaderProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
         <ThemeModeScript />
       </head>
       <body className={`${inter.className}`}>
-        <Flowbite theme={{ theme: customTheme }}>{children}</Flowbite>
+        <TopLoaderProvider>
+          <Flowbite theme={{ theme: customTheme }}>{children}</Flowbite>
+        </TopLoaderProvider>
       </body>
     </html>
   );

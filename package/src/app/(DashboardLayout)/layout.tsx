@@ -2,6 +2,7 @@
 import React from "react";
 import Sidebar from "./layout/vertical/sidebar/Sidebar";
 import Header from "./layout/vertical/header/Header";
+import Breadcrumb from "./layout/vertical/Breadcrumb/Breadcrumb";
 
 export default function Layout({
   children,
@@ -15,12 +16,9 @@ export default function Layout({
         <Sidebar />
         <div className="body-wrapper w-full bg-lightgray dark:bg-dark">
           <Header />
+          <Breadcrumb />
           {/* Body Content  */}
-          <div
-            className={`container mx-auto  py-30`}
-          >
-            {children}
-          </div>
+          <div className={`container mx-auto  py-30`}>{children}</div>
         </div>
       </div>
     </div>

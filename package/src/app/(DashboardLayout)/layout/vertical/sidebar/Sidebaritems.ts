@@ -40,7 +40,7 @@ const SidebarContent: MenuItem[] = [
         name: "Bot Facebook",
         icon: "fa-brands:facebook",
         id: uniqueId(),
-        url: "/ui/bot/facebook",
+        url: "/ui/facebookbot",
         // url: "/ui/typography",
       },
       {
@@ -48,7 +48,7 @@ const SidebarContent: MenuItem[] = [
         icon: "fa-brands:telegram-plane",
         id: uniqueId(),
         // url: "/ui/table",
-        url: "/ui/bot/telegram",
+        url: "/ui/telegrambot",
       },
       {
         name: "Form",
