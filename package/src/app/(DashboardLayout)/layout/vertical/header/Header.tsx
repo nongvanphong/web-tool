@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Badge, Button, Navbar } from "flowbite-react";
 import { Icon } from "@iconify/react";
 import Profile from "./Profile";
-import FullLogo from "../../shared/logo/FullLogo";
 import { Drawer } from "flowbite-react";
 import MobileSidebar from "../sidebar/MobileSidebar";
 import Link from "next/link";
@@ -60,8 +59,14 @@ const Header = () => {
             </div>
 
             <div className="flex gap-4 items-center">
-              <Button as={Link} href="https://www.wrappixel.com/templates/materialm-next-js-tailwind-dashboard-template/?ref=33" target="_blank" size={'sm'} color={"primary"}>
-                Upgrade To Pro 
+              <Button
+                as={Link}
+                href="https://www.wrappixel.com/templates/materialm-next-js-tailwind-dashboard-template/?ref=33"
+                target="_blank"
+                size={"sm"}
+                color={"primary"}
+              >
+                Nâng cấp
               </Button>
               <Profile />
             </div>

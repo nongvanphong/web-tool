@@ -1,15 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import 'simplebar-react/dist/simplebar.min.css';
+import "simplebar-react/dist/simplebar.min.css";
 import "./css/globals.css";
 import { Flowbite, ThemeModeScript } from "flowbite-react";
 import customTheme from "@/utils/theme/custom-theme";
+import { appConfig } from "../../config";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MaterialM-Nextjs-Free",
+  title: appConfig.appName,
 };
 
 export default function RootLayout({

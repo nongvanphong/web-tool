@@ -1,8 +1,7 @@
-"use client";
-import React from "react";
+"use client";;
 import { Icon } from "@iconify/react";
 import { Badge, Dropdown } from "flowbite-react";
-import { HiOutlineDotsVertical  } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 import Link from "next/link";
 const EarningReports = () => {
   const dropdownItems = ["Action", "Another action", "Something else"];

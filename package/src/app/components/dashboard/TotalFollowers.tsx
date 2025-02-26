@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
 import dynamic from "next/dynamic";
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { Icon } from "@iconify/react";
 import { Dropdown } from "flowbite-react";
-import { HiOutlineDotsVertical  } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const TotalFollowers = () => {
   const Action = [
@@ -113,7 +112,7 @@ const TotalFollowers = () => {
             <span className="w-14 h-10 rounded-full flex items-center justify-center  bg-error text-white">
               <Icon icon="solar:users-group-rounded-bold-duotone" height={24} />
             </span>
-            <h5 className="text-base opacity-70">Total followers</h5>
+            <h5 className="text-base opacity-70">Tổng đơn bán</h5>
           </div>
           <div>
             <Dropdown
@@ -123,8 +122,7 @@ const TotalFollowers = () => {
                 <span className="h-9 w-9 flex justify-center items-center rounded-full  cursor-pointer">
                   <HiOutlineDotsVertical size={22} />
                 </span>
-              )}
-            >
+              )}>
               {Action.map((items, index) => (
                 <Dropdown.Item key={index} className="flex gap-3">
                   <Icon icon={`${items.icon}`} height={18} />
@@ -148,8 +146,8 @@ const TotalFollowers = () => {
                 options={ChartData}
                 series={ChartData.series}
                 type="bar"
-                height='100px'
-                width='100%'
+                height="100px"
+                width="100%"
               />
             </div>
           </div>

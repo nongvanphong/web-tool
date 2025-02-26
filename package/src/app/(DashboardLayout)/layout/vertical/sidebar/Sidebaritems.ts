@@ -23,10 +23,10 @@ import { uniqueId } from "lodash";
 
 const SidebarContent: MenuItem[] = [
   {
-    heading: "Dashboards",
+    heading: "Bảng điều khiển",
     children: [
       {
-        name: "Dashboard",
+        name: "Trung tâm",
         icon: "solar:widget-add-line-duotone",
         id: uniqueId(),
         url: "/",
@@ -34,19 +34,21 @@ const SidebarContent: MenuItem[] = [
     ],
   },
   {
-    heading: "Utilities",
+    heading: "Tiện ích",
     children: [
       {
-        name: "Typography",
-        icon: "solar:text-circle-outline",
+        name: "Bot Facebook",
+        icon: "fa-brands:facebook",
         id: uniqueId(),
-        url: "/ui/typography",
+        url: "/ui/bot/facebook",
+        // url: "/ui/typography",
       },
       {
-        name: "Table",
-        icon: "solar:bedside-table-3-linear",
+        name: "Bot Telegarm",
+        icon: "fa-brands:telegram-plane",
         id: uniqueId(),
-        url: "/ui/table",
+        // url: "/ui/table",
+        url: "/ui/bot/telegram",
       },
       {
         name: "Form",
@@ -63,16 +65,16 @@ const SidebarContent: MenuItem[] = [
     ],
   },
   {
-    heading: "Auth",
+    heading: "Xác minh",
     children: [
       {
-        name: "Login",
+        name: "Đăng nhập",
         icon: "solar:login-2-linear",
         id: uniqueId(),
         url: "/auth/login",
       },
       {
-        name: "Register",
+        name: "Đăng ký",
         icon: "solar:shield-user-outline",
         id: uniqueId(),
         url: "/auth/register",
