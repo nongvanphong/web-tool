@@ -11,13 +11,19 @@ interface NavItemsProps {
 }
 const NavItems: React.FC<NavItemsProps> = ({ item }) => {
   const pathname = usePathname();
+  const pathSegments = pathname.split("/").filter(Boolean);
+
+  const limitedPath = pathSegments.join("/");
+
+  const formattedPath = `/${limitedPath}`;
+
   return (
     <>
       <Sidebar.Item
         href={item.url}
         as={Link}
         className={`${
-          item.url == pathname
+          item.url == formattedPath
             ? "!text-primary bg-lightprimary "
             : "text-link bg-transparent group/link "
         } `}
@@ -28,7 +34,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
           ) : (
             <span
               className={`${
-                item.url == pathname
+                item.url == formattedPath
                   ? "dark:bg-white rounded-full mx-1.5 group-hover/link:bg-primary !bg-primary h-[6px] w-[6px]"
                   : "h-[6px] w-[6px] bg-darklink dark:bg-white rounded-full mx-1.5 group-hover/link:bg-primary"
               } `}
